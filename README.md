@@ -22,3 +22,20 @@ bufferClient.get('/profiles.json', function(error, profile, response){
   }
 });
 ```
+
+The following code example shows how to post updates
+
+```javascript
+var Buffer = require('node-buffer');
+
+var bufferClient = new Buffer({
+  access_token: 'ACCESS_TOKEN'
+});
+
+bufferClient.post('/updates/create.json',{profile_ids:['PROFILE_ID'],text:'TEXT'}, function(error, profile, response){
+  console.log(error);
+  if (!error) {
+    console.log(profile);
+  }
+});
+```
