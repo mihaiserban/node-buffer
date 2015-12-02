@@ -32,10 +32,10 @@ var bufferClient = new Buffer({
   access_token: 'ACCESS_TOKEN'
 });
 
-bufferClient.post('/updates/create.json',{profile_ids:['PROFILE_ID'],text:'TEXT'}, function(error, profile, response){
+bufferClient.post('/updates/create.json',{profile_ids:['PROFILE_ID'],text:'TEXT'}, function(error, update, response){
   console.log(error);
   if (!error) {
-    console.log(profile);
+    console.log(update);
   }
 });
 ```
